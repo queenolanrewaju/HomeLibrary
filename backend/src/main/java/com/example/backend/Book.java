@@ -13,15 +13,16 @@ public class Book {
     private String isbn;
     private String review;
     private Character bookmark;
+    private String id;
 
-    public Book() {}
 
-    public Book(String title, String author, String isbn, String review, Character bookmark) {
+    public Book(String title, String author, String isbn, String review, Character bookmark, String id) {
         this.title = title;
         this.author = author;
         this.isbn = isbn;
         this.review = review;
         this.bookmark = bookmark;
+        this.id = id;
     }
 
     public String getTitle() { return title; }
@@ -29,6 +30,8 @@ public class Book {
     public String getIsbn() { return isbn; }
     public String getReview() { return review; }
     public Character getBookmark() { return bookmark; }
+    public String getId() { return id; }
+
 
     public void setTitle(String title) { this.title = title; }
     public void setAuthor(String author) { this.author = author; }

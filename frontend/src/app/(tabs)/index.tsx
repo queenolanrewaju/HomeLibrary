@@ -29,6 +29,12 @@ function getDevMenuHint() {
   );
 }
 
+function getCurrentReads() {
+  
+  // This is a placeholder for fetching current reads from the backend.
+  // You would typically use a hook like useEffect to fetch data from your API.
+}
+
 export default function HomeScreen() {
   const { user, logout } = useAuth();
   return (
@@ -44,20 +50,20 @@ export default function HomeScreen() {
           </Pressable>
         </ThemedView>
 
-        <ThemedText type="code" style={styles.code}>
+        {/* <ThemedText type="code" style={styles.code}>
           get started
-        </ThemedText>
+        </ThemedText> */}
 
         <ThemedView type="backgroundElement" style={styles.stepContainer}>
-          <HintRow
-            title="Try editing"
-            hint={<ThemedText type="code">src/app/index.tsx</ThemedText>}
-          />
-          <HintRow title="Dev tools" hint={getDevMenuHint()} />
-          <HintRow
-            title="Fresh start"
-            hint={<ThemedText type="code">npm run reset-project</ThemedText>}
-          />
+          <ThemedText type="title">Current Reads</ThemedText>
+          {/*add a get request to the backend to fetch the current reads and display them here , in order of last updated*/}
+
+          
+          {/* <Pressable onPress={() => }}>
+            <ThemedText type="link">Edit this file</ThemedText>
+          </Pressable> */}
+
+
         </ThemedView>
 
         {Platform.OS === 'web' && <WebBadge />}
